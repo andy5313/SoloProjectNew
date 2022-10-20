@@ -64,3 +64,36 @@ img {
   object-fit: contain;
 }
 
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.log-in-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in-header {
+  text-align: center;
+}
+
+.log-in-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-nav-btn {
+  padding-left: 30px;
+}

@@ -10,7 +10,10 @@ const MovieDetails = (props) => {
             <img src={props.movie.photoURL} />
             <p>{props.movie.description}</p>
             <p>{props.movie.author}</p>
-            <Button id={props.id} onClick={props.handleDelete} variant='danger'>X</Button> 
+            <div className='btnDiv'>
+                <Button id={props.id} onClick={props.handleDelete} variant='danger'> X </Button>
+                <Button id={props.id} onClick={props.handleDelete} variant='secondary'> Edit </Button> 
+            </div>
         </div>
     )
 }

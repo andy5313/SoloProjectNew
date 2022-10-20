@@ -21,10 +21,9 @@ router.route('/:id').delete((req, res) => {
     });
 });
 
-router.route('/').put((req, res) => {
+router.route('/update/:id').put((req, res) => {
     const { name, description, author, photoURL } = req.body;
-    const newBook = new Book({name, description, author, photoURL});
-    newBook.findById(req.body.id).then((book) => {
+    Book.findById(req.params.id).then((book) => {
         book.name = name;
         book.description = description;
         book.author = author;

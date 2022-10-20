@@ -20,10 +20,9 @@ router.route('/:id').delete((req, res) => {
     });
 });
 
-router.route('/').put((req, res) => {
+router.route('/update/:id').put((req, res) => {
     const { name, description, author, photoURL } = req.body;
-    const newMovie = new Movie({name, description, author, photoURL});
-    newMovie.findById(req.body.id).then((movie) => {
+    Movie.findById(req.params.id).then((movie) => {
         movie.name = name;
         movie.description = description;
         movie.author = author;

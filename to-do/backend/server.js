@@ -26,6 +26,18 @@ app.use('/movies', moviesRouter);
 const booksRouter = require('./routes/books');
 app.use('/books', booksRouter);
 
+const gamesRouter = require('./routes/games');
+app.use('/games', gamesRouter);
+
+const userRouter = require('./routes/users')
+app.use('/users', userRouter);
+
+app.use('/login', (req, res) => {
+    res.send({
+        token: "andy"
+    })
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port:  ${port}`);
 });
