@@ -31,6 +31,10 @@ const LoginForm = ({ setToken }) => {
     
     }
 
+    const handleSubmitSignUp = e => {
+        navigate('/signup');
+    }
+
     return (
         <form className="log-in-form" onSubmit={handleSubmit}>
             <div className = "form-inner">
@@ -45,12 +49,13 @@ const LoginForm = ({ setToken }) => {
                         <input type="password" onChange={e => setPassword(e.target.value)} name="password" id="password"/>
                     </div>   
                 </div> 
-                <button className="btn btn-success" type="submit"> Log In </button>
+                <div className="btn-group2">
+                    <button className="btn btn-success" type="submit"> Log In </button>
+                    <button onClick={handleSubmitSignUp} className="btn btn-primary" type="submit"> Sign Up </button>
+                </div>
             </div>
             
-            
-           
-            
+
         </form>
     )
 }

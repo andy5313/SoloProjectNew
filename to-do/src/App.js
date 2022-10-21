@@ -16,8 +16,12 @@ function App() {
     return(
       <Router>
         <Routes>
+        <Route exact path="/" element={<LoginForm setToken={setToken} /> } />
         <Route exact path='/signup' element={<SignUpForm /> } />
         <Route exact path='/login' element={<LoginForm setToken={setToken} /> } />
+        <Route exact path="/books" element={<LoginForm setToken={setToken} /> } />
+        <Route exact path="/movies" element={<LoginForm setToken={setToken} /> } />
+        <Route exact path="/games" element={<LoginForm setToken={setToken} /> } />
         </Routes>
       </Router>
     ) 
@@ -30,7 +34,7 @@ function App() {
           <Navbar removeToken={removeToken} />
               <Routes>
                   <Route path="/" exact element={<BooksComponent />} />
-                  <Route path="/books" exact element={<BooksComponent />} />
+                  <Route path="/books" exact element={<BooksComponent />} /> 
                   <Route path="/movies" exact element={<MoviesComponent />} />
                   <Route path="/games" exact element={<GamesComponent />} />
               </Routes>

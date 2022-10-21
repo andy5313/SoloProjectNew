@@ -30,6 +30,10 @@ const SignUpForm = () => {
          
     }
 
+    const handleSubmitLogin = e => {
+        navigate('/login');
+    }
+
     return (
         <form className="log-in-form" onSubmit={handleSubmit}>
             <div className = "form-inner">
@@ -43,8 +47,10 @@ const SignUpForm = () => {
                         <label htmlFor="password">Password:</label>
                         <input type="password" onChange={e => setPassword(e.target.value)} name="password" id="password"/>
                     </div>  
-                    <button className="btn btn-primary" type="submit"> Sign Up </button>
-
+                    <div className="btn-group2">
+                        <button className="btn btn-primary" type="submit"> Sign Up </button>
+                        <button onClick={handleSubmitLogin} className="btn btn-success" type="submit"> Log In </button>
+                    </div>
                 </div>  
             </div>
             

@@ -1,5 +1,4 @@
 import Nav from 'react-bootstrap/Nav';
-import useToken from '../useToken';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ removeToken }) => {
